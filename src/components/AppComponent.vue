@@ -22,15 +22,14 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 gy-4" v-for="event in store.eventList">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ event.name }}</h5>
-                        <p class="card-text">Event date: {{ event.date }}</p>
-                        <p class="card-text">Avalaible tickets: {{ event.available_tickets }}</p>
-                    </div>
+    <div class="row">
+        <div class="col-md-4 gy-4" v-for="event in store.eventList">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ event.name }}</h5>
+                    <p class="card-text">Event date: {{ event.date }}</p>
+                    <p class="card-text">Avalaible tickets: {{ event.available_tickets }}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
         </div>

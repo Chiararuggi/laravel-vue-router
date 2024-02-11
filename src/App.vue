@@ -46,12 +46,15 @@ export default {
 
 <template>
   <main>
-    <AppComponent />
-
-    <button class="btn btn-primary">
-      <font-awesome-icon icon="fa-solid fa-home" class="me-1" />
-      <span>Primary button</span>
-    </button>
+    <div class="container">
+      <h1>Events:</h1>
+      <AppComponent />
+  
+      <button class="btn btn-primary my-4">
+        <font-awesome-icon icon="fa-solid fa-home" class="me-1" />
+        <span>Primary button</span>
+      </button>
+    </div>
   </main>
 </template>
 
