@@ -1,13 +1,9 @@
 <script>
-import AppComponent from "./components/AppComponent.vue";
 
 import axios from "axios"; //importo Axios
 import { store } from "./store.js"; //state management
 
 export default {
-  components: {
-    AppComponent,
-  },
   data() {
     return {
       store,
@@ -45,17 +41,12 @@ export default {
 </script>
 
 <template>
-  <main>
-    <div class="container">
+  <div class="container">
+    <header>
       <h1>Events:</h1>
-      <AppComponent />
-  
-      <button class="btn btn-primary my-4">
-        <font-awesome-icon icon="fa-solid fa-home" class="me-1" />
-        <span>Primary button</span>
-      </button>
-    </div>
-  </main>
+    </header>
+    <router-view></router-view>
+  </div>
 </template>
 
 <style lang="scss">
@@ -68,7 +59,5 @@ export default {
 // @use './styles/partials/variables' as *;
 
 // ...qui eventuale SCSS di App.vue
-main {
-  padding: 1rem;
-}
+
 </style>
