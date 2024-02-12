@@ -2,8 +2,12 @@
 
 import axios from "axios"; //importo Axios
 import { store } from "./store.js"; //state management
+import AppHeader from "./components/AppHeader.vue";
 
 export default {
+  components: {
+    AppHeader,
+  },
   data() {
     return {
       store,
@@ -41,10 +45,10 @@ export default {
 </script>
 
 <template>
+  <header>
+    <AppHeader />
+  </header>
   <div class="container">
-    <header>
-      <h1>Events:</h1>
-    </header>
     <router-view></router-view>
   </div>
 </template>
@@ -59,5 +63,4 @@ export default {
 // @use './styles/partials/variables' as *;
 
 // ...qui eventuale SCSS di App.vue
-
 </style>
