@@ -22,20 +22,8 @@ export default {
 </script>
 
 <template>
-    <div class="row">
-        <div class="col-md-4 gy-4" v-for="event in store.eventList">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">{{ event.name }}</h5>
-                    <p class="card-text">Event date: {{ event.date }}</p>
-                    <p class="card-text">Avalaible tickets: {{ event.available_tickets }}</p>
-                    <router-link :to="{ name: 'event-detail', params: { id: event.id } }" class="btn btn-primary">
-                        <font-awesome-icon icon="fa-solid fa-circle-info" class="me-2" />
-                        <span>Details</span>
-                    </router-link>
-                </div>
-            </div>
-        </div>
+    <div>
+        <h1>Sono un componente!</h1>
     </div>
 </template>
 
