@@ -29,7 +29,10 @@ export default {
                     <h5 class="card-title">{{ event.name }}</h5>
                     <p class="card-text">Event date: {{ event.date }}</p>
                     <p class="card-text">Avalaible tickets: {{ event.available_tickets }}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <router-link :to="{ name: 'event-detail', params: { id: event.id } }" class="btn btn-primary">
+                        <font-awesome-icon icon="fa-solid fa-circle-info" class="me-2" />
+                        <span>Details</span>
+                    </router-link>
                 </div>
             </div>
         </div>
