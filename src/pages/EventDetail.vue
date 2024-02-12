@@ -46,7 +46,9 @@ export default {
         <span class="mb-1">Event name: {{ event?.name }}</span>
         <span class="mb-1">Made by: {{ event?.user.name }}</span>
         <span class="mb-1">Event date: {{ event?.date }}</span>
-        <span class="mb-3">Avalaible tickets: {{ event?.available_tickets }}</span>
+        <span class="mb-1">Avalaible tickets: {{ event?.available_tickets }}</span>
+        <span class="mb-3">Tags: <span class="mx-1 badge rounded-pill text-bg-primary" v-for="tag in event?.tags">{{
+                tag.name }}</span></span>
             <router-link :to="{ name: 'events' }" class="btn btn-primary">
                 <span>Back to events</span>
             </router-link>
